@@ -268,78 +268,43 @@
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .skill-category {
-            padding: 2.5rem;
+            padding: 2rem;
             background-color: #F3F4F6;
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            transition: transform 0.5s ease;
         }
 
         .skill-category:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
         }
 
         .skill-category-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 2rem;
-            text-align: left;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #1F2937;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         .skill-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            text-align: center;
         }
 
-        .skill-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: #4B5563;
+            font-size: 0.95rem;
+            transition: color 0.5s ease;
         }
 
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .skill-name {
-            font-size: 1rem;
-            font-weight: 500;
+        .skill-list li:hover {
             color: #1F2937;
-        }
-
-        .skill-level {
-            font-size: 0.85rem;
-            color: #6B7280;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 6px;
-            background-color: #E5E7EB;
-            border-radius: 3px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background-color: #1F2937;
-            transition: width 1s ease;
-        }
-
-        .skill-item.no-level .skill-name {
-            padding: 0.3rem 0;
         }
 
         /* Projects Section */
@@ -528,6 +493,11 @@
                 grid-template-columns: 1fr;
             }
 
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
             .contact-link {
                 width: 100%;
             }
@@ -545,11 +515,6 @@
 
             .about-text-section {
                 text-align: center;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 1rem;
             }
 
             section {
@@ -636,81 +601,33 @@
         <h2 class="section-title fade-in">Skills</h2>
         <div class="skills-grid">
             <div class="skill-category fade-in">
-                <h3 class="skill-category-title">디자인 툴</h3>
+                <h3 class="skill-category-title">Design Tools</h3>
                 <ul class="skill-list">
-                    <li class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Figma</span>
-                            <span class="skill-level">고급</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 90%;"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Adobe XD</span>
-                            <span class="skill-level">중급</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 70%;"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Photoshop</span>
-                            <span class="skill-level">중급</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 70%;"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Illustrator</span>
-                            <span class="skill-level">중급</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 70%;"></div>
-                        </div>
-                    </li>
+                    <li>Figma</li>
+                    <li>Adobe XD</li>
+                    <li>Sketch</li>
+                    <li>Photoshop</li>
+                    <li>Illustrator</li>
                 </ul>
             </div>
             <div class="skill-category fade-in">
-                <h3 class="skill-category-title">기타</h3>
+                <h3 class="skill-category-title">Prototyping</h3>
                 <ul class="skill-list">
-                    <li class="skill-item no-level">
-                        <div class="skill-header">
-                            <span class="skill-name">사용자 리서치</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 85%;"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item no-level">
-                        <div class="skill-header">
-                            <span class="skill-name">프로토타이핑</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 90%;"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item no-level">
-                        <div class="skill-header">
-                            <span class="skill-name">디자인 시스템 구축</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 80%;"></div>
-                        </div>
-                    </li>
-                    <li class="skill-item no-level">
-                        <div class="skill-header">
-                            <span class="skill-name">기본적인 HTML/CSS</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 75%;"></div>
-                        </div>
-                    </li>
+                    <li>Figma Prototype</li>
+                    <li>ProtoPie</li>
+                    <li>Principle</li>
+                    <li>Framer</li>
+                    <li>InVision</li>
+                </ul>
+            </div>
+            <div class="skill-category fade-in">
+                <h3 class="skill-category-title">Development</h3>
+                <ul class="skill-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React 기초</li>
+                    <li>Responsive Design</li>
                 </ul>
             </div>
         </div>
