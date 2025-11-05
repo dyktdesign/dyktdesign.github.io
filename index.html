@@ -187,22 +187,50 @@
         }
 
         .about-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #E5E7EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #9CA3AF;
+            overflow: hidden;
+        }
+
+        .about-text-section {
+            text-align: left;
         }
 
         .about-text {
-            font-size: 1.1rem;
-            line-height: 2;
+            font-size: 1.05rem;
+            line-height: 1.9;
             color: #4B5563;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .experience {
             display: grid;
             gap: 1.5rem;
-            margin-top: 3rem;
+            margin-top: 4rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .experience-item {
@@ -474,6 +502,21 @@
                 width: 100%;
             }
 
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+                font-size: 3rem;
+            }
+
+            .about-text-section {
+                text-align: center;
+            }
+
             section {
                 padding: 4rem 1.5rem;
             }
@@ -522,22 +565,33 @@
     <section id="about">
         <h2 class="section-title fade-in">About</h2>
         <div class="about-content">
-            <p class="about-text fade-in">
-                안녕하세요, UX/UI 디자이너 김지수입니다. 사용자 경험을 중심으로 생각하며, 
-                직관적이고 아름다운 인터페이스를 디자인합니다. 사용자의 관점에서 문제를 발견하고, 
-                데이터 기반의 솔루션을 통해 더 나은 경험을 만들어가는 것이 제 목표입니다.
-            </p>
-            <div class="experience">
-                <div class="experience-item fade-in">
-                    <div class="experience-title">시니어 UX/UI 디자이너</div>
-                    <div class="experience-date">2022 - 현재</div>
-                    <div class="experience-desc">B2B SaaS 플랫폼의 UX/UI 전반을 담당하며 사용자 리서치부터 최종 디자인까지 진행</div>
-                </div>
-                <div class="experience-item fade-in">
-                    <div class="experience-title">주니어 UX/UI 디자이너</div>
-                    <div class="experience-date">2020 - 2022</div>
-                    <div class="experience-desc">모바일 앱 및 웹 서비스 디자인, 프로토타이핑 및 디자인 시스템 구축 참여</div>
-                </div>
+            <div class="about-image-section fade-in">
+                <div class="profile-image">👤</div>
+            </div>
+            <div class="about-text-section">
+                <p class="about-text fade-in">
+                    안녕하세요, UX/UI 디자이너 김지수입니다.
+                </p>
+                <p class="about-text fade-in">
+                    사용자가 겪는 작은 불편함도 놓치지 않고, 직관적이고 아름다운 인터페이스로 해결하는 것을 좋아합니다. 
+                    특히 모바일 앱 디자인과 사용자 리서치에 관심이 많으며, 데이터 기반의 디자인 결정을 중요하게 생각합니다.
+                </p>
+                <p class="about-text fade-in">
+                    대학에서 시각디자인을 전공하며 브랜딩부터 웹/앱 디자인까지 다양한 프로젝트를 경험했습니다. 
+                    최근에는 접근성과 인클루시브 디자인에 대해 공부하고 있으며, 모든 사용자가 편리하게 사용할 수 있는 제품을 만들고 싶습니다.
+                </p>
+            </div>
+        </div>
+        <div class="experience">
+            <div class="experience-item fade-in">
+                <div class="experience-title">시니어 UX/UI 디자이너</div>
+                <div class="experience-date">2022 - 현재</div>
+                <div class="experience-desc">B2B SaaS 플랫폼의 UX/UI 전반을 담당하며 사용자 리서치부터 최종 디자인까지 진행</div>
+            </div>
+            <div class="experience-item fade-in">
+                <div class="experience-title">주니어 UX/UI 디자이너</div>
+                <div class="experience-date">2020 - 2022</div>
+                <div class="experience-desc">모바일 앱 및 웹 서비스 디자인, 프로토타이핑 및 디자인 시스템 구축 참여</div>
             </div>
         </div>
     </section>
